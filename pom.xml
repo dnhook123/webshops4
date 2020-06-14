@@ -71,9 +71,8 @@
   <modules>
     <module>webshop-hook/services/rest-product</module>
     <module>webshop-hook/services/rest-order</module>
-    <module>webshop-hook/services/rest-review</module>
     <module>webshop-hook/services/rest-cart</module>
-    <module>webshop-hook/services/rest-stock</module>
+
   </modules>
 
   <profiles>
@@ -82,9 +81,9 @@
       <modules>
         <module>webshop-hook/services/rest-product</module>
         <module>webshop-hook/services/rest-order</module>
-        <module>webshop-hook/services/rest-review</module>
+
         <module>webshop-hook/services/rest-cart</module>
-        <module>webshop-hook/services/rest-stock</module>
+
       </modules>
     </profile>
   </profiles>
