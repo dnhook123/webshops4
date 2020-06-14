@@ -3,6 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.webshop</groupId>
+  <packaging>pom</packaging>
   <artifactId>parent-webshop-hook</artifactId>
   <version>1.0</version>
     <name>Webshop</name>
