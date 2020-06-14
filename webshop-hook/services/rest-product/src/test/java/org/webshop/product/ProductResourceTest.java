@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ProductResourceTest {
 
-    private static final String DEFAULT_NAME = "Super Baguette";
+    private static final String DEFAULT_NAME = "Super Baguettee";
     private static final String UPDATED_NAME = "Super Baguette (updated)";
     private static final String DEFAULT_DESCRIPTION = "Super Baguette Tradition";
     private static final String UPDATED_DESCRIPTION = "Super Baguette Tradition (updated)";
