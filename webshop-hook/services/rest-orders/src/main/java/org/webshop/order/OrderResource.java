@@ -41,7 +41,7 @@ public class OrderResource {
         }
     }
 
-    @Operation(summary = "Returns all the products from the database")
+    @Operation(summary = "Returns all the orders")
         @APIResponse(responseCode = "200", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Orders.class, type = SchemaType.ARRAY)))
     @GET
     public Response getAllOrders() {

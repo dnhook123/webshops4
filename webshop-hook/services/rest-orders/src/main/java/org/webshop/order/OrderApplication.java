@@ -13,16 +13,13 @@ import javax.ws.rs.core.Application;
 @ApplicationPath("/")
 @OpenAPIDefinition(
         info = @Info(title = "Order API",
-                description = "This API allows CRUD operations on a product",
+                description = "This API allows CRUD operations on a order entity",
                 version = "1.0",
                 contact = @Contact(name = "Quarkus", url = "https://github.com/quarkusio")),
         servers = {
-                @Server(url = "http://localhost:8083")
-        },
-        externalDocs = @ExternalDocumentation(url = "https://github.com/quarkusio/quarkus-workshops", description = "All the Quarkus workshops"),
-        tags = {
-                @Tag(name = "api", description = "Public that can be used by anybody"),
-                @Tag(name = "Order", description = "Anybody interested in heroes")
+                @Server(url = "http://localhost:8099")
+        }, tags = {
+
         }
 )
 

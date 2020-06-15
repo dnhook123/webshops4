@@ -1,4 +1,4 @@
-package org.webshop.product;
+package org.webshop;
 
 import io.quarkus.test.common.QuarkusTestResourceLifecycleManager;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -9,9 +9,9 @@ import java.util.Map;
 public class DatabaseResource implements QuarkusTestResourceLifecycleManager {
 
     private static final PostgreSQLContainer DATABASE = new PostgreSQLContainer<>("postgres:10.5")
-            .withDatabaseName("products_database")
-            .withUsername("productadmin")
-            .withPassword("productadmin")
+            .withDatabaseName("orders_database")
+            .withUsername("orderadmin")
+            .withPassword("orderadmin")
             .withExposedPorts(8080);
 
     @Override
