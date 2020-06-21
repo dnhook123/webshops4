@@ -36,6 +36,13 @@ public class ProductService {
         return product;
     }
 
+    public Product updateProduct(long id, String vendor) {
+        Product entity = Product.findById(id);
+        entity.vendor = vendor;
+        Product.persist(entity);
+
+        return entity;
+    }
     public Product updateProduct(@Valid Product product) {
         Product entity = Product.findById(product.id);
         entity.name = product.name;

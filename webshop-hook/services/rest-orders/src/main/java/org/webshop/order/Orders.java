@@ -16,6 +16,7 @@ public class Orders extends PanacheEntity {
     public BigDecimal totalPrice;
     public String customerName;
     public String customerEmail;
+    public String productIds;
 
 }
 

@@ -30,6 +30,8 @@ public class Product extends PanacheEntity {
 
     public String imageSource;
 
+    public String vendor;
+
     @Override
     public String toString() {
         return "Product{" +

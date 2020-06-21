@@ -10,9 +10,9 @@
 
   <modules>
     <module>webshop-hook/services/rest-product</module>
-   <!-- <module>webshop-hook/services/rest-orders</module>-->
-<!--    <module>webshop-hook/services/rest-cart</module>
-    <module>webshop-hook/services/rest-customer</module>-->
+    <module>webshop-hook/services/rest-orders</module>
+   <module>webshop-hook/services/rest-cart</module>
+    <module>webshop-hook/services/rest-customer</module>
 
   </modules>
 

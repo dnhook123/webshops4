@@ -95,4 +95,14 @@ public class ProductResource {
             return Response.noContent().build();
         }
 
+    @Operation(summary = "Updates an existing Product")
+    @APIResponse(responseCode = "200", description = "The updated product", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Product.class)))
+    @PUT
+    @Path("/{id}")
+    public Response updateProduct(@PathParam("id") Long id, String orderStatus) {
+        Product product = service.updateProduct(id, orderStatus);
+        LOGGER.debug("Order updated with new valued " + product);
+        return Response.ok(product).build();
+    }
+
     }

@@ -41,6 +41,20 @@ public class OrderResource {
         }
     }
 
+
+    @Operation(summary = "Returns a order for a given identifier")
+    @APIResponse(responseCode = "200", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Orders.class)))
+    @GET
+    @Path("/recent")
+    public Response getOrder() {
+        Orders order = service.findMostRecentOrder();
+        if (order != null) {
+            LOGGER.debug("Found order " + order);
+            return Response.ok(order).build();
+        } else {
+            return Response.noContent().build();
+        }
+    }
     @Operation(summary = "Returns all the orders")
         @APIResponse(responseCode = "200", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Orders.class, type = SchemaType.ARRAY)))
     @GET
@@ -62,6 +76,15 @@ public class OrderResource {
     }
 
 
+    @Operation(summary = "Updates an exiting order")
+    @APIResponse(responseCode = "200", description = "The updated order", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Orders.class)))
+    @PUT
+    @Path("/{id}")
+    public Response updateOrder(@PathParam("id") Long id, String orderStatus) {
+         Orders order = service.updateOrder(id, orderStatus);
+        LOGGER.debug("Order updated with new valued " + order);
+        return Response.ok(order).build();
+    }
 
     @Operation(summary = "Deletes an exiting order")
     @APIResponse(responseCode = "204")
