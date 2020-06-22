@@ -19,11 +19,7 @@ import javax.ws.rs.core.Application;
         servers = {
                 @Server(url = "http://localhost:8081")
         },
-        externalDocs = @ExternalDocumentation(url = "https://github.com/quarkusio/quarkus-workshops", description = "All the Quarkus workshops"),
-        tags = {
-                @Tag(name = "api", description = "Public that can be used by anybody"),
-                @Tag(name = "product", description = "Anybody interested in heroes")
-        }
+        externalDocs = @ExternalDocumentation(url = "https://github.com/quarkusio/quarkus-workshops", description = "All the Quarkus workshops")
 )
 
 public class ProductApplication extends Application {

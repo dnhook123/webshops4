@@ -50,6 +50,7 @@ public class ProductService {
         entity.price = product.price;
         entity.picture = product.picture;
         entity.sauce = product.sauce;
+        entity.vendor = product.vendor;
         return entity;
     }
 

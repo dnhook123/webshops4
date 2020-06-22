@@ -42,7 +42,7 @@ public class OrderResource {
     }
 
 
-    @Operation(summary = "Returns a order for a given identifier")
+    @Operation(summary = "Returns the most recent order")
     @APIResponse(responseCode = "200", content = @Content(mediaType = APPLICATION_JSON, schema = @Schema(implementation = Orders.class)))
     @GET
     @Path("/recent")
